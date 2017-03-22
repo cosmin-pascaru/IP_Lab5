@@ -1,27 +1,28 @@
 package com;
 
+import java.security.AlgorithmConstraints;
 import java.util.ArrayList;
 import java.util.Vector;
 
 public class Aplicatie {
 
+  private static Aplicatie instance;
+
+  public static Aplicatie getInstance(){
+    if (instance == null){
+      instance = new Aplicatie("v0.1");
+    }
+    return instance;
+  }
+
+  private Aplicatie(String s){
+      versiune = s;
+  }
+
   public String versiune;
 
-    /**
-   * 
-   * @element-type Client
-   */
-    private ArrayList<Client> clients;
-    /**
-   * 
-   * @element-type Piesa
-   */
-  public ArrayList<Piesa> piese;
-    /**
-   * 
-   * @element-type Banca
-   */
-  public ArrayList<Banca> banci;
+  private ArrayList<Interfata> interfete;
+  BD bd;
 
   public void vizualizarePiese() {
   }

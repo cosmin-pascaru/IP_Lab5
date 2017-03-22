@@ -4,14 +4,29 @@ import java.util.ArrayList;
 
 public class Actor {
 
-  public String nume;
+  private String nume;
 
-  public String prenume;
+  private String prenume;
 
-  public String biografie;
+  private String biografie;
 
-  public Integer id;
+  private Integer id;
 
   private ArrayList<Piesa> piese;
 
+  public Actor(String nume , String prenume, String biografie, Integer id, ArrayList<Piesa> piese){
+      this.nume = nume;
+      this.prenume = prenume;
+      this.biografie = biografie;
+      this.id = id;
+      this.piese = new ArrayList<>(piese);
+  }
+
+  public void add(Piesa piesa){
+      piese.add(piesa);
+  }
+  @Override
+    public String toString(){
+      return (nume + " " + prenume + " " + biografie + " " + String.valueOf(id));
+  }
 }

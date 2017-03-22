@@ -2,11 +2,15 @@ package com;
 
 public class Banca {
 
-  public String nume;
+  private String nume;
+  private Integer id;
+  private Aplicatie aplicatie;
 
-  public Integer id;
-
-    public Aplicatie aplicatie;
+  public Banca(String nume, Integer id, Aplicatie aplicatie){
+    this.nume = nume;
+    this.id = id;
+    this.aplicatie = aplicatie;
+  }
 
   public void tranzactie( Integer suma,  Client client) {
   }

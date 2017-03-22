@@ -4,14 +4,23 @@ import java.util.ArrayList;
 
 public class Piesa {
 
-  public Integer id;
+  private Integer id;
 
-  public String nume;
+  private String nume;
 
-  public ArrayList<OcupareSala> ocupari;
-  public ArrayList<Actor>  actori;
+  private ArrayList<OcupareSala> ocupari;
+  private ArrayList<Actor>  actori;
 
-  public Aplicatie aplicatie;
+  private Aplicatie aplicatie;
+
+  public Piesa(Aplicatie aplicatie, Integer id, String nume){
+        this.aplicatie = aplicatie;
+        this.id = id;
+        this.nume = nume;
+
+        ocupari = new ArrayList<>();
+        actori = new ArrayList<>();
+  }
 
   public void vizualizareActori() {
   }
